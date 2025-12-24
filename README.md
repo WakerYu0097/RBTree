@@ -1,4 +1,9 @@
 # RBTree
 red-black tree and set Tree
-By @Waker
-use it like RBTree<K,V> or SetTree<K>
+# Author
+Waker
+# introduction
+use it like 
+RBTree<int,string> tree;  
+tree.Insert(1,"Hello");  
+tree.Insert(2,"Hi");  
