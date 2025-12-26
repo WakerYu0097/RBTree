@@ -1,5 +1,5 @@
 # RBTree
-red-black tree and set Tree
+red-black Tree and set Tree,
 # Author
 Waker
 # introduction
