@@ -316,8 +316,13 @@ private:
 
             child->parent = parent;
             child->color = Black;
-            // 要看current是parent的left还是right
-            if (current == parent->left)
+            
+            if(parent==nullptr)
+            {
+                root=child;
+                root->parent=nullptr;
+            }
+            else if (current == parent->left)
             {
                 parent->left = child;
             }
@@ -334,7 +339,13 @@ private:
 
             child->parent = parent;
             child->color = Black;
-            if (current == parent->left)
+            
+            if(parent==nullptr)
+            {
+                root=child;
+                root->parent=nullptr;
+            }
+            else if (current == parent->left)
             {
                 parent->left = child;
             }
