@@ -110,6 +110,7 @@ private:
 
                     current = grandparent;
                     parent = current->parent;
+                    continue;
                 }
                 // now uncle is nullptr or Black
 
@@ -147,6 +148,7 @@ private:
 
                     current = grandparent;
                     parent = current->parent;
+                    continue;
                 }
                 // now uncle is nullptr or Black
 
@@ -533,7 +535,7 @@ private:
         _PrintWithData(root->right, false, prefix + (isLeft ? "│   " : "    "));
     }
 
-    void _Destroy(TreeNode *node)
+    void _Destroy(TreeNode *&node)
     {
         if (node == nullptr)
         {

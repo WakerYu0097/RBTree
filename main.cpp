@@ -51,7 +51,6 @@ void testSetTree(int nodeCount, int seed, int deleteCount = 0, int startIndex = 
     deleteCount = min(deleteCount, nodeCount - startIndex);
 
     bool test_delete = deleteCount != 0;
-    bool showNums = nodeCount <= 1024;
 
     SetTree<int> tree;
     mt19937 random(seed);
@@ -70,13 +69,7 @@ void testSetTree(int nodeCount, int seed, int deleteCount = 0, int startIndex = 
             }
         }
         tree.Insert(cur);
-        if (showNums)
-        {
-            cout << cur << " ";
-        }
     }
-    if (showNums)
-        cout << endl;
     tree.Print();
 
     if (test_delete)
@@ -106,6 +99,6 @@ int main()
     testSetTree(32, 50, 0);
     cout << endl;
 
-    system("pause");
+    //system("pause");
     return 0;
 }
